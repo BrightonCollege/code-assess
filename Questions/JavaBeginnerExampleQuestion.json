@@ -1,0 +1,24 @@
+{
+   "Questions":[
+      {
+         "QuestionText":"System.out.println(Fuck you);",
+         "Answers":[
+            "Print out \"Fuck you\" in consol and move cursos to next line",
+            "Print out \"Fuck you\" in consol and stay on the same line",
+            "Make a window with fuck you alert",
+            "Crash",
+            4
+         ]
+      },
+      {
+         "QuestionText":"int c = 0; \n for (int i = 1; i <= 5; i++) { \n c*=c; \n }",
+         "Answers":[
+            "c will hold of 5 factorial",
+            "c will hold value of 4 factorial",
+            "c will be 0",
+            "Crash",
+            1
+         ]
+      }
+   ]
+}
