@@ -1,10 +1,10 @@
 {
    "Questions":[
       {
-         "QuestionText":"System.out.println(Fuck you);",
+         "QuestionText":"System.out.println(\"Fuck you\");",
          "Answers":[
-            "Print out \"Fuck you\" in consol and move cursos to next line",
-            "Print out \"Fuck you\" in consol and stay on the same line",
+            "Print out \"Fuck you\" in console and move cursos to next line",
+            "Print out \"Fuck you\" in console and stay on the same line",
             "Make a window with fuck you alert",
             "Crash",
             4
