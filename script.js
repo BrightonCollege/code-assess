@@ -47,15 +47,6 @@ function processResults(jsonObj, count) {
     gist.contentDocument.writeln(gisthtml);
     gist.contentDocument.close();
     
-    // Test whether we can embed another gist
-
-    gisthtml = '<html><body onload="parent.adjustIframeSize(document.body.scrollHeight)">'
-                    + '<script src="https://gist.github.com/adrianiainlam/2d370d3beb9b86dfd6f0.js"></script></body></html>';
-    gist.contentDocument.open();
-    gist.contentDocument.writeln(gisthtml);
-    gist.contentDocument.close();
-    
-    
     if (count == q_array.length) {
         FinalScreen();
     }
