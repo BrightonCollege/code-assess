@@ -25,7 +25,7 @@ function goHome() {
 
 function GameOverScreen() {
     document.getElementById("Game").className = "ModeHidden";
-    document.getElementById("finalScore").className = score;
+    document.getElementById("finalScore").innerHTML = score;
     //document.getElementById("finalTime").className = time;
     document.getElementById("Game Over").className = "ModeVisible";
 }
