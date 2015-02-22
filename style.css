@@ -29,11 +29,9 @@ button.big {
 .ModeVisible {
   height:  100%;
   width:   100%;
-  visibility: visible
+  display: block;
 }
 
 .ModeHidden {
-    height:100%;
-    width: 100%;
-    visibility: hidden;
+    display: none;
 }
