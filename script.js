@@ -11,7 +11,7 @@ function ChangeMode(Mode) {
     }
     if (Mode == 'Custom') {
         document.getElementById("custom").className = "ModeVisible";
-        return
+        return;
     }
     document.getElementById("Game").className = "ModeVisible";
 }
