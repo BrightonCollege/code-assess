@@ -82,4 +82,3 @@ function processResults(jsonObj, count) {
         }
     }
 }
-}
