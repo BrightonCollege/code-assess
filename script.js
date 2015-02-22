@@ -1,4 +1,6 @@
 var score = 0;
+var time = 0;
+var timer;
 
 function ChangeMode(Mode) {
     document.getElementById("Main").className = "ModeHidden";
@@ -26,7 +28,7 @@ function goHome() {
 function GameOverScreen() {
     document.getElementById("Game").className = "ModeHidden";
     document.getElementById("finalScore").innerHTML = score;
-    //document.getElementById("finalTime").className = time;
+    document.getElementById("finalTime").className = time;
     document.getElementById("Game Over").className = "ModeVisible";
 }
 
@@ -44,12 +46,17 @@ function getJsonRequest(url) {
 }
 
 function processResults(jsonObj, count) {
-    if (count == 0) {score = 0;}
+    if (count == 0) {
+        score = 0;
+        time = 0;
+        timer = setInterval(updateTimer, 1000);
+    }
     var id = document.getElementById.bind(document);
     var embedScript = id("embedScript");
     var q_array = jsonObj.Questions;
     if (count == q_array.length) {
         //Show game over screen
+        clearInterval(timer);
         GameOverScreen();
     }
     var q = q_array[count];
@@ -60,7 +67,7 @@ function processResults(jsonObj, count) {
     gist.contentDocument.writeln(gisthtml);
     gist.contentDocument.close();
     
-    UpdateScore();
+    updateScore();
     
     var ans_array = q.Answers;
     
@@ -88,7 +95,12 @@ function processResults(jsonObj, count) {
     }
 }
 
+function updateTimer() {
+    time++;
+   // document.getElementById("time").innerHTML = time;
+}
 
-function UpdateScore() {
+
+function updateScore() {
     document.getElementById("score").innerHTML = score;
 }
