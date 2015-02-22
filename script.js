@@ -19,7 +19,7 @@ function ChangeMode(Mode) {
         document.getElementById("custom").className = "ModeVisible";
         return;
     }
-    if (Mode == 'Creator') {
+    if (Mode == 'creator') {
         document.getElementById("creator").className = "ModeVisible";
         return;
     }
