@@ -1,0 +1,53 @@
+<html lang = "en">
+
+<head>
+    <title>Code-Assess</title>
+    
+    <style>
+        .ModeVisible{
+          height:  100%;
+          width:   100%;
+          visibility: visible
+        }
+        .ModeHidden{
+            height:100%;
+            width: 100%;
+            visibility: hidden;
+        }
+        
+        
+    </style>
+
+    <script language="javascript">
+        function ChangeURL(URL) {
+            if (URL ==  "Java") {
+                Document.getElementById("URL").innerText = "Questions/JavaBeginnerExampleQuestion.json";
+            }
+            if (URL == "Python") {
+                Document.getElementById("URL").innerText = "Questions/PythonNormalExampleQuestion.json";
+            }
+            Document.getElementById("Main").attributes.class = "ModeHidden";
+            Document.getElementById("Game").attributes.class = "ModeVisible";
+            }
+    </script>
+</head>
+
+<body>
+    <div id = "Main", class = "ModeVisible">
+        <h1 id = "URL">URL</h1>
+        <input type="button" value = "Java" id = "JavaButton" onclick = "ChangeURL("Java");"></input>
+        
+        <input type="button" value = "Python" id = "Pythonbutton" onclick = "ChangeURL("Python");">
+            
+        </input>
+        
+        
+    </div>
+    
+    <div id = "Game", class = "ModeHidden">
+        
+        
+    </div>
+</body>
+
+</html>
