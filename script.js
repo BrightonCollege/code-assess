@@ -74,7 +74,7 @@ function processResults(jsonObj, count) {
             id("Answer" + i).onclick = function () {
                 alert("Wrong answer!");
                 score++;
-                processResults(jsonObj, count+1)
+                processResults(jsonObj, count+1);
             }
         }
     }
