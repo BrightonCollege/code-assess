@@ -16,7 +16,7 @@ function ChangeMode(Mode) {
         document.getElementById("URL").innerText = "Questions/PythonNormalExampleQuestion.json";
         getJsonRequest("Questions/PythonListComprehensionQs.json");
     }
-    if (Mode == 'Custom') {
+    if (Mode == 'Player') {
         document.getElementById("custom").className = "ModeVisible";
         return;
     }
@@ -37,6 +37,7 @@ function goHome() {
     document.getElementById("Game").className = "ModeHidden";
     document.getElementById("custom").className = "ModeHidden";
     document.getElementById("Game Over").className = "ModeHidden";
+    document.getElementById("creator").className = "ModeHidden";
 }
 
 function GameOverScreen() {
