@@ -1,7 +1,7 @@
 {
 	"Questions":[
 		{
-			"QuestionText":"x=[i for i in range(10)] \n x will hold:",
+			"QuestionText":"<script src='https://gist.github.com/MaksymPetyak/d76813a9c32bffc31182.js'></script>",
 			"Answers":[
 				"a list of all integers between 1 and 10",
 				"a list of all integers between 0 and 9",
@@ -11,7 +11,7 @@
 			]
 		},
 		{
-			"QuestionText":"x=sum([i for i in range(10) if i%2==0]) \n x will hold:",
+			"QuestionText":"<script src='https://gist.github.com/MaksymPetyak/c69fc98135dc40adb537.js'></script>",
 			"Answers":[
 				"the sum of all numbers between 1 and 10",
 				"the sum of all even numbers between 1 and 10",
@@ -21,7 +21,7 @@
 			]
 		},
 		{
-			"QuestionText":"x=[] \n for i in range(1,51): \n \t x.append(i*5) \n is equivalent to:",
+			"QuestionText":"<script src='https://gist.github.com/MaksymPetyak/b67fd53727431c458133.js'></script>",
 			"Answers":[
 				"x=[i for i*5 in range(1,51)]",
 				"x=[i*5 for i in range(1,51)]",
@@ -31,7 +31,7 @@
 			]
 		},
 		{
-			"QuestionText":"x=[1] \n for i in range(2,51): \n \t x.append(i*x[-1]) \n x will hold:",
+			"QuestionText":"<script src='https://gist.github.com/MaksymPetyak/7bd3c0a8c02aa8cda3be.js'></script>",
 			"Answers":[
 				"a list of all the squares of integers between 1 and 50",
 				"a list of all the factorials of integers between 1 and 50",
@@ -41,7 +41,7 @@
 			]
 		},
 		{
-			"QuestionText":"print(sum([j**2 for j in range(100) if len(str(j))==2])) \n Prints:",
+			"QuestionText":"<script src='https://gist.github.com/MaksymPetyak/adcb22b276faf6beb9d0.js'></script>",
 			"Answers":[
 				"a list of all the squares of 2 digit integers",
 				"a list of all the squares of integers between 0 and 100",
@@ -51,7 +51,7 @@
 			]
 		},
 		{
-			"QuestionText":"x=[5*str(i) for i in range(1,10)] \n x will hold:",
+			"QuestionText":"<script src='https://gist.github.com/MaksymPetyak/abd4de9188e8c71022d8.js'></script>",
 			"Answers":[
 				"a list of the first 9 multiples of 5 as integers",
 				"a list of the first 9 multiples of 5 as strings",
@@ -61,7 +61,7 @@
 			]
 		},
 		{
-			"QuestionText":"x=[[i*j for j in range(1,10)] for i in range(1,100)] \n x will hold",
+			"QuestionText":"<script src='https://gist.github.com/MaksymPetyak/6fa0588700c06039fc80.js'></script>",
 			"Answers":[
 				"a list of lists of the first 9 multiples of the first 99 integers",
 				"a list of lists of the first 99 multiples of the first 9 integers",
@@ -71,7 +71,7 @@
 			]
 		},
 		{
-			"QuestionText":"y={<dictionary of names:height for students in a class>} \n x=[i for i in y if y[i]>150] \n x will hold",
+			"QuestionText":"<script src='https://gist.github.com/MaksymPetyak/2c890e47d249d4c8751c.js'></script>",
 			"Answers":[
 				"a list of all the heights in the class that are greater than 150",
 				"a list of all the names in the class whose height is greater than 150",
@@ -81,7 +81,7 @@
 			]
 		},
 		{
-			"QuestionText":"y={<dictionary of names:height for students in a class>} \n Which of the following will print the number of people in the class who is taller than 150",
+			"QuestionText":"<script src='https://gist.github.com/MaksymPetyak/73440f5afb7cb9e6e808.js'></script>",
 			"Answers":[
 				"print(sum([y[i] for i in y if i>150]))",
 				"print(len([i for i in y if i>150]))",
@@ -91,23 +91,13 @@
 			]
 		},
 		{
-			"QuestionText":"prime(x) returns True if x is prime and False otherwise \n x=[i for i in range(100) if prime(i)] \n x will hold:",
+			"QuestionText":"<script src='https://gist.github.com/MaksymPetyak/f18cd41db808faefa27d.js'></script>",
 			"Answers":[
 				"a list of all prime numbers between 0 and 100",
 				"a list of True's and False's depending on wether the index of the element is prime",
 				"a list of all numbers between 0 and 100",
 				"The process will return an error as prime(i) doesn't return a boolean",
 				1
-			]
-		},
-		{
-			"QuestionText":"",
-			"Answers":[
-				"",
-				"",
-				"",
-				"",
-				3
 			]
 		}			
 	]
