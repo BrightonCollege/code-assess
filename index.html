@@ -47,6 +47,24 @@
             </div>
         </div>
     </div>
+     <div id = "creator" class = "ModeHidden">
+        <input type="text" id = "questionURL"> Input Url Here</input> <br />
+        <input type="text" id = "variant1"> Answer number 1</input>  <br />
+        <input type="text" id = "variant2"> Answer number 2</input>  <br />
+        <input type="text" id = "variant3"> Answer number 3</input>  <br />
+        <input type="text" id = "variant4"> Answer number 4 </input> <br />
+        Correct Answer: 
+        <select id="rightVariant">
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+        </select>
+        <br />
+        <button onclick="parseUserChoiceToJson()">Add Question</button> </br>
+        <textarea id="JSON"></textarea> 
+    </div>
+    
     <div id="Game Over" class="ModeHidden">
         <div class="center">
         Score: <span id="finalScore">0</span><br />
