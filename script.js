@@ -5,6 +5,7 @@ var LastMode; //will hold last mode choosen for the retry button, URL if custom
 
 function ChangeMode(Mode) {
     document.getElementById("Main").className = "ModeHidden";
+    document.getElementById("Game Over").className = "ModeHidden";
     if (Mode == 'Java') {
         LastMode = 'Java';
         document.getElementById("URL").innerText = "Questions/JavaBeginnerExampleQuestion.json";
