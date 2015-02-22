@@ -61,12 +61,12 @@
 			]
 		},
 		{
-			"QuestionText":"",
+			"QuestionText":"x=[[i*j for j in range(1,10)] for i in range(1,100)] \n x will hold",
 			"Answers":[
-				"",
-				"",
-				"",
-				"",
+				"a list of lists of the first 9 multiples of the first 99 integers",
+				"a list of lists of the first 99 multiples of the first 9 integers",
+				"a list of lists of the first 10 multiples of the first 100 integers",
+				"a list of lists of the first 10 multiples of the first 100 integers",
 				3
 			]
 		}
