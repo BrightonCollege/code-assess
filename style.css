@@ -33,7 +33,7 @@ div.code {
   border-width: 5px;
   padding: 0.5em;
   font-size: 20pt;
-  height: 50%;
+  height: 100%;
 }
 
 div.code-outer {
@@ -44,6 +44,7 @@ div.code-outer {
   background: -o-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Firefox 3.6 to 15 */
   width: 60%;
+  height: 50%;
 }
 
 /* Buttons */
