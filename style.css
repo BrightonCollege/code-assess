@@ -2,9 +2,24 @@
   font-family: Ubuntu Mono;
 }
 
+div.header {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+p.header{
+  font-size: 72pt; 
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+div.header:hover {
+  color: gray;
+}
+
 /* Console Styling */
 
-.code {
+div.code {
   background-color: rgb(42, 42, 42);
   color: white;
   font-family: Ubuntu Mono;
@@ -17,15 +32,25 @@
   min-height: 5.1em;
 }
 
+div.code-outer {
+  border-radius: 10px;
+  padding: 3px;
+  background: linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* Standard syntax */
+  background: -webkit-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Firefox 3.6 to 15 */
+}
+
 /* Buttons */
 
 button {
   color: white;
-  background-color: gray;
+  background-color: rgb(42, 42, 42);
   border-radius: 5px;
   border-style: none;
   padding: 1em;
   box-shadow: 0px 0px 5px black;
+  margin: 0.5em;
 }
 
 button:hover {
@@ -33,13 +58,21 @@ button:hover {
 }
 
 button.ans {
-  font-size: 32px;
+  font-size: 14px;
+  width: 50%;
 }
 
 button.big {
   font-size: 40px;
   width: 250px;
   border-radius: 10px;
+}
+
+/* Divs */
+
+div.center {
+  margin: 1em;
+  text-align: center;
 }
 
 /* Main Divs */

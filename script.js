@@ -14,6 +14,12 @@ function ChangeMode(Mode) {
     document.getElementById("Game").className = "ModeVisible";
 }
 
+function goHome() {
+    document.getElementById("Main").className = "ModeVisible"
+    document.getElementById("Game").className = "ModeHidden"
+    document.getElementById("custom").className = "ModeHidden"
+}
+
 function getJsonRequest(url) {
     var req = new XMLHttpRequest();
     var jsonObj;

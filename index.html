@@ -6,32 +6,40 @@
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <h1>Code Assess</h1>
+    <div onclick="goHome()" class="header">
+        <p class="header">Code Assess</p>
+        <i>Click me to go home!</i>
+    </div>
+    <hr>
     <p>
         URL: <span id="URL">None</span>
     </p>
     <div id="Main" class="ModeVisible">
-        <button class="big" id="JavaButton" onclick="ChangeMode('Java')">Java</button>
-        <button class="big" id="PythonButton" onclick="ChangeMode('Python')">Python</button>
-        <button class="big" id="CustomButton" onclick="ChangeMode('Custom')">Custom</button>
+        <div class="center">
+            <p>Default Modes:</p>
+            <button class="big" id="JavaButton" onclick="ChangeMode('Java')">Java</button>
+            <button class="big" id="PythonButton" onclick="ChangeMode('Python')">Python</button>
+            <p>Custom Modes:</p>
+            <button class="big" id="CustomButton" onclick="ChangeMode('Creator')">Creator</button>
+            <button class="big" id="CustomButton" onclick="ChangeMode('Player')">Player</button>
+        </div>
     </div>
     <div id="custom" class="ModeHidden">
         <h2>Custom Package Selector</h2>
     </div>
     <div id="Game" class="ModeHidden">
+        <script id="embedScript"></script>
+        <div class="code-outer">
         <div class="code">
-            print "hello world"
             <iframe id="gist" width="100%"></iframe>
         </div>
-        <!--<iframe id="gist" width="100%"></iframe>-->
-        <p>
-            <button class="ans" id="Answer1">Answer1</button>
-            <button class="ans" id="Answer2">Answer2</button>
-        </p>
-        <p>
-            <button class="ans" id="Answer3">Answer3</button>
+        </div>
+        <div class="center">
+            <button class="ans" id="Answer1">Answer1</button><br />
+            <button class="ans" id="Answer2">Answer2</button><br />
+            <button class="ans" id="Answer3">Answer3</button><br />
             <button class="ans" id="Answer4">Answer4</button>
-        </p>
+        </div>
     </div>
 </body>
 </html>
