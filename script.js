@@ -16,7 +16,7 @@ function ChangeMode(Mode) {
         document.getElementById("URL").innerText = "Questions/PythonNormalExampleQuestion.json";
         getJsonRequest("Questions/PythonListComprehensionQs.json");
     }
-    if (Mode == 'Custom') {
+    if (Mode == 'Player') {
         document.getElementById("custom").className = "ModeVisible";
         return;
     }
@@ -24,6 +24,10 @@ function ChangeMode(Mode) {
         document.getElementById("creator").className = "ModeVisible";
         return;
     }
+    if (Mode == 'AccessURL') {
+            getJsonRequest(document.getElementById("userURL").value);
+            return;
+        }
     document.getElementById("Game").className = "ModeVisible";
 }
 
@@ -33,6 +37,7 @@ function goHome() {
     document.getElementById("Game").className = "ModeHidden";
     document.getElementById("custom").className = "ModeHidden";
     document.getElementById("Game Over").className = "ModeHidden";
+    document.getElementById("creator").className = "ModeHidden";
 }
 
 function GameOverScreen() {
@@ -43,6 +48,7 @@ function GameOverScreen() {
 }
 
 function getJsonRequest(url) {
+    try {
     var req = new XMLHttpRequest();
     var jsonObj;
     req.open("GET", url);
@@ -57,6 +63,9 @@ function getJsonRequest(url) {
         }
     }
     req.send();
+    } catch(e) {
+        document.getElementById("wrongURL").hidden = false;
+    }
 }
 
 function processResults(jsonObj, count) {
