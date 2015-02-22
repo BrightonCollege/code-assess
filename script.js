@@ -1,4 +1,5 @@
 var score = 0;
+
 function ChangeMode(Mode) {
     document.getElementById("Main").className = "ModeHidden";
     if (Mode == 'Java') {
@@ -35,9 +36,6 @@ function getJsonRequest(url) {
 }
 
 function processResults(jsonObj, count) {
-    if (count == 1) {
-        console.log("Count was incremented");
-    }
     var id = document.getElementById.bind(document);
     var embedScript = id("embedScript");
     var q_array = jsonObj.Questions;
