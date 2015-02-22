@@ -44,6 +44,7 @@ function getJsonRequest(url) {
 }
 
 function processResults(jsonObj, count) {
+    if (count == 0) {score = 0;}
     var id = document.getElementById.bind(document);
     var embedScript = id("embedScript");
     var q_array = jsonObj.Questions;
