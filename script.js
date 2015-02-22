@@ -38,7 +38,7 @@ function processResults(jsonObj) {
     var div = id("Game");
     var script = document.createElement("script");
     script.setAttribute("src", "https://gist.github.com/adrianiainlam/2bfe1b8e70616eada426.js");
-    cont.insertBefore(script, div.firstChild);
+    div.insertBefore(script, div.firstChild);
     
     var ans_array = q.Answers;
     
