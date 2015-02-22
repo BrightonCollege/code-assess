@@ -27,7 +27,7 @@ function getJsonRequest(url) {
     req.onreadystatechange = function() {
         if(this.readyState == 4) {
             jsonObj = JSON.parse(this.response);
-            processResults(jsonObj);
+            processResults(jsonObj, 0);
         }
     }
     req.send();
