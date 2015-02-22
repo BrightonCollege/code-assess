@@ -28,7 +28,7 @@ function goHome() {
 function GameOverScreen() {
     document.getElementById("Game").className = "ModeHidden";
     document.getElementById("finalScore").innerHTML = score;
-    document.getElementById("finalTime").className = time;
+    document.getElementById("finalTime").innerHTML = time;
     document.getElementById("Game Over").className = "ModeVisible";
 }
 
@@ -97,7 +97,7 @@ function processResults(jsonObj, count) {
 
 function updateTimer() {
     time++;
-   // document.getElementById("time").innerHTML = time;
+    document.getElementById("time").innerHTML = time;
 }
 
 
