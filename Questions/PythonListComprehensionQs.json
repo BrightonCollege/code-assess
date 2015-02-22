@@ -71,13 +71,13 @@
 			]
 		},
 		{
-			"QuestionText":"y={<dictionary of names:DOB of some class>}",
+			"QuestionText":"y={<dictionary of names:height for some class>} \n x=[i for i in y if y[i]>150] \n x will hold",
 			"Answers":[
-				"",
-				"",
-				"",
-				"",
-				3
+				"a list of all the heights in the class that is greater than 150",
+				"a list of all the names in the class whose height is greater than 150",
+				"an empty list as names are strings and therefore cannot be compared with 150",
+				"The process will return an error as names are strings and therefore cannot be compared with 150",
+				2
 			]
 		},
 		{
