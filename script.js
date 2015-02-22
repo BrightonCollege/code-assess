@@ -41,14 +41,18 @@ function processResults(jsonObj) {
     var q_array = jsonObj.Questions;
     var q = q_array[0];
     
-    /*var div = id("Game");
-    var script = document.createElement("script");
-    script.setAttribute("src", "https://gist.github.com/adrianiainlam/2bfe1b8e70616eada426.js");
-    div.insertBefore(script, div.firstChild);*/
     var gist = id("gist");
     
     var gisthtml = '<html><body onload="parent.adjustIframeSize(document.body.scrollHeight)">'
                     + '<script src="https://gist.github.com/adrianiainlam/2bfe1b8e70616eada426.js"></script></body></html>';
+    gist.contentDocument.open();
+    gist.contentDocument.writeln(gisthtml);
+    gist.contentDocument.close();
+    
+    // Test whether we can embed another gist
+
+    gisthtml = '<html><body onload="parent.adjustIframeSize(document.body.scrollHeight)">'
+                    + '<script src="https://gist.github.com/adrianiainlam/2d370d3beb9b86dfd6f0.js"></script></body></html>';
     gist.contentDocument.open();
     gist.contentDocument.writeln(gisthtml);
     gist.contentDocument.close();
