@@ -42,7 +42,8 @@
                 <button class="ans" id="Answer2">Answer2</button><br />
                 <button class="ans" id="Answer3">Answer3</button><br />
                 <button class="ans" id="Answer4">Answer4</button><br />
-                Score: <span id="score">0</span>
+                Score: <span id="score">0</span>  <br />
+                Time: <span id="time">0</span>
             </div>
         </div>
     </div>
@@ -50,7 +51,7 @@
         <div class="center">
         Score: <span id="finalScore">0</span><br />
         Time: <span id="finalTime">0</span><br />
-        <button id = "Restart">Try again?</button><br />
+        <button id = "Restart" onclick="ChangeMode(document.getDocumentById('URL').innerHTML)">Try again?</button>
         </div>
     </div>
 </body>
