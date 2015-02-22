@@ -33,13 +33,11 @@ function getJsonRequest(url) {
     req.send();
 }
 
-function processResults(jsonObj) {
-    
+function processResults(jsonObj, count) {
     var id = document.getElementById.bind(document);
     var embedScript = id("embedScript");
-    
     var q_array = jsonObj.Questions;
-    var q = q_array[0];
+    var q = q_array[count];
     
     var gist = id("gist");
     
@@ -57,15 +55,31 @@ function processResults(jsonObj) {
     gist.contentDocument.writeln(gisthtml);
     gist.contentDocument.close();
     
+    
+    if (count == q_array.length) {
+        FinalScreen();
+    }
     var ans_array = q.Answers;
+    
+    var correctAnswer = ans_array[4];
     
     id("Answer1").innerHTML = ans_array[0];
     id("Answer2").innerHTML = ans_array[1];
     id("Answer3").innerHTML = ans_array[2];
     id("Answer4").innerHTML = ans_array[3];
-    
-    id("Answer" + ans_array[4]).onclick = function() {
-        alert("correct answer");
+
+    for (i = 0; i < 4; i++) {
+        if (i == correctAnswer) {
+            id("Answer" + i).onclick = function () {
+                alert("Correct answer");
+                processResults(jsonObj, count++);
+            };
+        } else {
+            id("Answer" + i).onclick = function () {
+                alert("Wrong answer!");
+                processResults(jsonObj, count++)
+            }
+        }
     }
-    
+}
 }
