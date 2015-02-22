@@ -17,9 +17,9 @@ function ChangeMode(Mode) {
 }
 
 function goHome() {
-    document.getElementById("Main").className = "ModeVisible"
-    document.getElementById("Game").className = "ModeHidden"
-    document.getElementById("custom").className = "ModeHidden"
+    document.getElementById("Main").className = "ModeVisible";
+    document.getElementById("Game").className = "ModeHidden";
+    document.getElementById("custom").className = "ModeHidden";
 }
 
 function getJsonRequest(url) {
@@ -75,7 +75,7 @@ function processResults(jsonObj, count) {
                 alert("Wrong answer!");
                 score++;
                 processResults(jsonObj, count+1);
-            }
+            };
         }
     }
 }
