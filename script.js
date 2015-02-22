@@ -80,6 +80,7 @@ function processResults(jsonObj, count) {
     }
 }
 
+
 function UpdateScore() {
     document.getElementById("score").innerHTML = score;
 }
