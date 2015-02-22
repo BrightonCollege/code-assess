@@ -1,15 +1,8 @@
-<<<<<<< Updated upstream
-function ChangeURL(URL) {
-    if (URL == 'Java') {
-        //document.getElementById("URL").innerText = "Questions/JavaBeginnerExampleQuestion.json";
-        
-        getJsonRequest("Questions/JavaBeginnerExampleQuestion.json");
-=======
 function ChangeMode(Mode) {
     document.getElementById("Main").className = "ModeHidden";
     if (Mode == 'Java') {
         document.getElementById("URL").innerText = "Questions/JavaBeginnerExampleQuestion.json";
->>>>>>> Stashed changes
+        getJsonRequest("Questions/JavaBeginnerExampleQuestion.json");
     }
     if (Mode == 'Python') {
         document.getElementById("URL").innerText = "Questions/PythonNormalExampleQuestion.json";
