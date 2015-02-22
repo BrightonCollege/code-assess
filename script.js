@@ -2,7 +2,7 @@ var score = 0;
 var time = 0;
 var timer;
 var LastMode; //will hold last mode choosen for the retry button, URL if custom
-
+var Questions = new Array() //used in JSON parcing
 function ChangeMode(Mode) {
     document.getElementById("Main").className = "ModeHidden";
     document.getElementById("Game Over").className = "ModeHidden";
@@ -17,6 +17,10 @@ function ChangeMode(Mode) {
     }
     if (Mode == 'Custom') {
         document.getElementById("custom").className = "ModeVisible";
+        return;
+    }
+    if (Mode == 'Creator') {
+        document.getElementById("creator").className = "ModeVisible";
         return;
     }
     document.getElementById("Game").className = "ModeVisible";
