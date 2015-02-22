@@ -20,6 +20,20 @@ function goHome() {
     document.getElementById("Main").className = "ModeVisible";
     document.getElementById("Game").className = "ModeHidden";
     document.getElementById("custom").className = "ModeHidden";
+    document.getElementById("Game Over").className = "ModeHidden";
+}
+
+function GameOverScreen() {
+    document.getElementById("Game").className = "ModeHidden";
+    document.getElementById("finalScore").className = score;
+    //document.getElementById("finalTime").className = time;
+    document.getElementById("GameOver").className = "ModeVisible";
+}
+
+function FinalScreen() {
+    document.getElementById("Main").className = "ModeVisible";
+    document.getElementById("Game").className = "ModeHidden";
+    document.getElementById("custom").className = "ModeHidden";
 }
 
 function getJsonRequest(url) {
@@ -41,7 +55,7 @@ function processResults(jsonObj, count) {
     var q_array = jsonObj.Questions;
     if (count == q_array.length) {
         //Show game over screen
-        FinalScreen();
+        GameOverScreen();
     }
     var q = q_array[count];
     var gist = id("gist");
