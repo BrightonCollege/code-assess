@@ -23,6 +23,7 @@ function ChangeMode(Mode) {
 }
 
 function goHome() {
+    clearInterval(timer);
     document.getElementById("Main").className = "ModeVisible";
     document.getElementById("Game").className = "ModeHidden";
     document.getElementById("custom").className = "ModeHidden";
@@ -43,6 +44,9 @@ function getJsonRequest(url) {
     req.onreadystatechange = function() {
         if(this.readyState == 4) {
             jsonObj = JSON.parse(this.response);
+            score = 0;
+            time = 0;
+            timer = setInterval(updateTimer, 1000);
             processResults(jsonObj, 0);
         }
     }
@@ -50,11 +54,6 @@ function getJsonRequest(url) {
 }
 
 function processResults(jsonObj, count) {
-    if (count == 0) {
-        score = 0;
-        time = 0;
-        timer = setInterval(updateTimer, 1000);
-    }
     var id = document.getElementById.bind(document);
     var embedScript = id("embedScript");
     var q_array = jsonObj.Questions;
