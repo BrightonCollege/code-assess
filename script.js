@@ -54,6 +54,7 @@ function processResults(jsonObj, count) {
     gist.contentDocument.writeln(gisthtml);
     gist.contentDocument.close();
     
+    UpdateScore();
     
     var ans_array = q.Answers;
     
@@ -69,14 +70,12 @@ function processResults(jsonObj, count) {
             id("Answer" + i).onclick = function () {
                 alert("Correct answer");
                 score--;
-                UpdateScore();
                 processResults(jsonObj, count+1);
             };
         } else {
             id("Answer" + i).onclick = function () {
                 alert("Wrong answer!");
                 score++;
-                UpdateScore();
                 processResults(jsonObj, count+1)
             }
         }
