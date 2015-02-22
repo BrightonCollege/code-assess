@@ -3,12 +3,13 @@
     <title>Code-Assess</title>
     <script language="javascript" src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <div id = "Main", class = "ModeVisible">
         <h1 id = "URL">URL</h1>
-        <input type="button" value="Java" id="JavaButton" onclick="ChangeURL('Java')"></input>
-        <input type="button" value="Python" id="Pythonbutton" onclick="ChangeURL('Python')"></input>
+        <button class="big" id="JavaButton" onclick="ChangeURL('Java')">Java</button>
+        <button class="big" id="Pythonbutton" onclick="ChangeURL('Python')">Python</button>
     </div>
     <div id = "Game", class = "ModeHidden">
         <code id = "Question"> </code>

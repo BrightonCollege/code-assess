@@ -1,3 +1,31 @@
+* {
+  font-family: Ubuntu Mono;
+  font-weight: lighter;
+}
+
+body {
+  font-size: 12px;
+}
+
+button {
+  color: white;
+  background-color: gray;
+  border-radius: 5px;
+  border-style: none;
+  padding: 1em;
+  box-shadow: 0px 0px 5px black;
+}
+
+button:hover {
+  box-shadow: 0px 0px 10px black;
+}
+
+button.big {
+  font-size: 40px;
+  width: 250px;
+  border-radius: 10px;
+}
+
 .ModeVisible {
   height:  100%;
   width:   100%;
