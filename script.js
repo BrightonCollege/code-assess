@@ -23,6 +23,25 @@ function getJsonRequest(url) {
 }
 
 function processResults(jsonObj) {
-    // TODO: replace with something else
-    console.log(jsonObj);
+    
+    var id = document.getElementById.bind(document);
+    var embedScript = id("embedScript");
+    
+    var q_array = jsonObj.Questions;
+    var q = q_array[0];
+    
+    
+    embedScript.src = "https://gist.github.com/adrianiainlam/2bfe1b8e70616eada426.js";
+    
+    var ans_array = q.Answers;
+    
+    id("Answer1").innerHTML = ans_array[0];
+    id("Answer2").innerHTML = ans_array[1];
+    id("Answer3").innerHTML = ans_array[2];
+    id("Answer4").innerHTML = ans_array[3];
+    
+    id("Answer" + ans_array[4]).onclick = function() {
+        alert("correct answer");
+    }
+    
 }
