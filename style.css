@@ -63,7 +63,7 @@ button:hover {
 
 button.ans {
   font-size: 14px;
-  width: 30%;
+  width: 100%;
 }
 
 button.big {
@@ -89,6 +89,7 @@ div.center {
     display: none;
 }
 
-#Game {
+.flex {
   display: flex;
+  display: -webkit-flex;
 }
