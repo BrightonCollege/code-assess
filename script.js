@@ -34,11 +34,17 @@ function getJsonRequest(url) {
 }
 
 function processResults(jsonObj, count) {
+    if (count == 1) {
+        console.log("Count was incremented");
+    }
     var id = document.getElementById.bind(document);
     var embedScript = id("embedScript");
     var q_array = jsonObj.Questions;
+    if (count == q_array.length) {
+        //Show game over screen
+        FinalScreen();
+    }
     var q = q_array[count];
-    
     var gist = id("gist");
     
     var gisthtml = '<html><body onload="parent.adjustIframeSize(document.body.scrollHeight)">'
@@ -47,9 +53,7 @@ function processResults(jsonObj, count) {
     gist.contentDocument.writeln(gisthtml);
     gist.contentDocument.close();
     
-    if (count == q_array.length) {
-        FinalScreen();
-    }
+    
     var ans_array = q.Answers;
     
     var correctAnswer = ans_array[4];
