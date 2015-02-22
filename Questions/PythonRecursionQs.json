@@ -11,13 +11,13 @@
 			]
 		},
 		{
-			"QuestionText":"",
+			"QuestionText":"def function(x) \n \t if x==1: \n \t \t return([1]) \n \t if x==2: \n \t \t return([1,1]) \n \t y=function(x-1) \n \t return(y+[y[-1]+y[-2]]]) \n #NB recursion is not recommended for finding fibonacci numbers \n function(x) will return",
 			"Answers":[
-				"",
-				"",
-				"",
-				"",
-				3
+				"the xth fibonacci number",
+				"a list of first xth fibonacci numbers",
+				"the largest fibonacci number below x",
+				"a list of all fibonacci numbers below x",
+				2
 			]
 		}
 		{
