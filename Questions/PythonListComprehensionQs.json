@@ -66,8 +66,8 @@
 				"a list of lists of the first 9 multiples of the first 99 integers",
 				"a list of lists of the first 99 multiples of the first 9 integers",
 				"a list of lists of the first 10 multiples of the first 100 integers",
-				"a list of lists of the first 10 multiples of the first 100 integers",
-				3
+				"a list of lists of the first 100 multiples of the first 10 integers",
+				1
 			]
 		}
 	]
