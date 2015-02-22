@@ -1,4 +1,4 @@
-//var score = 0;
+var score = 0;
 
 function ChangeMode(Mode) {
     document.getElementById("Main").className = "ModeHidden";
@@ -81,5 +81,5 @@ function processResults(jsonObj, count) {
 }
 
 function UpdateScore() {
-    document.getElementById("score") = "Score: +" score;
+    document.getElementById("score") = "Score: " + score;
 }
