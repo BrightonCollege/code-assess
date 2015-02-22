@@ -68,7 +68,7 @@ function processResults(jsonObj, count) {
     id("Answer3").innerHTML = ans_array[2];
     id("Answer4").innerHTML = ans_array[3];
 
-    for (i = 0; i < 4; i++) {
+    for (i = 1; i < 5; i++) {
         if (i == correctAnswer) {
             id("Answer" + i).onclick = function () {
                 alert("Correct answer");
