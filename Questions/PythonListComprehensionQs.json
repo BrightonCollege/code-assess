@@ -94,7 +94,7 @@
 			"QuestionText":"prime(x) returns True if x is prime and False otherwise \n x=[i for i in range(100) if prime(i)] \n x will hold:",
 			"Answers":[
 				"a list of all prime numbers between 0 and 100",
-				"a list of True's and False's depending on wether the index of the element in the list is prime",
+				"a list of True's and False's depending on wether the index of the element is prime",
 				"a list of all numbers between 0 and 100",
 				"The process will return an error as prime(i) doesn't return a boolean",
 				1
