@@ -32,7 +32,7 @@ function getJsonRequest(url) {
     }
     req.send();
 }
-
+/*
 function processResults(jsonObj) {
     
     var id = document.getElementById.bind(document);
@@ -41,10 +41,10 @@ function processResults(jsonObj) {
     var q_array = jsonObj.Questions;
     var q = q_array[0];
     
-    /*var div = id("Game");
+    var div = id("Game");
     var script = document.createElement("script");
     script.setAttribute("src", "https://gist.github.com/adrianiainlam/2bfe1b8e70616eada426.js");
-    div.insertBefore(script, div.firstChild);*/
+    div.insertBefore(script, div.firstChild);
     var gist = id("gist");
     
     var gisthtml = '<html><body onload="parent.adjustIframeSize(document.body.scrollHeight)">'
@@ -63,5 +63,57 @@ function processResults(jsonObj) {
     id("Answer" + ans_array[4]).onclick = function() {
         alert("correct answer");
     }
+
+*/  
+function processResults(jsonObj, count) {
+    var id = document.getElementById.bind(document);
+    var embedScript = id("embedScript");
+    var q_array = jsonObj.Questions;
+    var q = q_array[count];
     
+    /*var div = id("Game");
+    var script = document.createElement("script");
+    script.setAttribute("src", "https://gist.github.com/adrianiainlam/2bfe1b8e70616eada426.js");
+    div.insertBefore(script, div.firstChild);*/
+    var gist = id("gist");
+    
+    var gisthtml = '<html><body onload="parent.adjustIframeSize(document.body.scrollHeight)">'
+                    + '<script src="https://gist.github.com/adrianiainlam/2bfe1b8e70616eada426.js"></script></body></html>';
+    gist.contentDocument.open();
+    gist.contentDocument.writeln(gisthtml);
+    gist.contentDocument.close();*/
+    
+    if (count == q_array.length) {
+        FinalScreen();
+    }
+    var ans_array = q.Answers;
+
+    var gist = id("gist");
+
+    var gisthtml = '<html><body onload="parent.adjustIframeSize(document.body.scrollHeight)">' + '<script src="https://gist.github.com/adrianiainlam/2bfe1b8e70616eada426.js"></script></body></html>';
+    gist.contentDocument.open();
+    gist.contentDocument.writeln(gisthtml);
+    gist.contentDocument.close();
+    
+    var correctAnswer = ans_array[4];
+    
+    id("Answer1").innerHTML = ans_array[0];
+    id("Answer2").innerHTML = ans_array[1];
+    id("Answer3").innerHTML = ans_array[2];
+    id("Answer4").innerHTML = ans_array[3];
+
+    for (i = 0; i < 4; i++) {
+        if (i == correctAnswer) {
+            id("Answer" + i).onclick = function () {
+                alert("Correct answer");
+                processResults(jsonObj, count++);
+            };
+        } else {
+            id("Answer" + i).onclick = function () {
+                alert("Wrong answer!");
+                processResults(jsonObj, count++)
+            }
+        }
+    }
+}
 }
