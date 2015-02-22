@@ -30,12 +30,6 @@ function GameOverScreen() {
     document.getElementById("GameOver").className = "ModeVisible";
 }
 
-function FinalScreen() {
-    document.getElementById("Main").className = "ModeVisible";
-    document.getElementById("Game").className = "ModeHidden";
-    document.getElementById("custom").className = "ModeHidden";
-}
-
 function getJsonRequest(url) {
     var req = new XMLHttpRequest();
     var jsonObj;
