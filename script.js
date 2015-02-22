@@ -35,8 +35,10 @@ function processResults(jsonObj) {
     var q_array = jsonObj.Questions;
     var q = q_array[0];
     
-    
-    embedScript.src = "https://gist.github.com/adrianiainlam/2bfe1b8e70616eada426.js";
+    var cont = id("buttonContainer1");
+    var script = document.createElement("script");
+    script.setAttribute("src", "https://gist.github.com/adrianiainlam/2bfe1b8e70616eada426.js");
+    cont.insertBefore(script, cont);
     
     var ans_array = q.Answers;
     
