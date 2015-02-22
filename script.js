@@ -46,6 +46,7 @@ function getJsonRequest(url) {
             jsonObj = JSON.parse(this.response);
             score = 0;
             time = 0;
+            document.getElementById("time").innerHTML = 0;
             timer = setInterval(updateTimer, 1000);
             processResults(jsonObj, 0);
         }
@@ -70,6 +71,8 @@ function processResults(jsonObj, count) {
     gist.contentDocument.open();
     gist.contentDocument.writeln(gisthtml);
     gist.contentDocument.close(); */
+    
+    //After code below things will probably go south. Try deleting this section if questions doesn't display
     
     var gistURL = q.QuestionText;
     var gisthtml = '<html><body><script src="' + gistURL + '"></script></body></html>';
