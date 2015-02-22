@@ -7,6 +7,10 @@ div.header {
   padding-bottom: 1em;
 }
 
+iframe {
+  border: none;
+}
+
 p.header{
   font-size: 72pt; 
   padding-bottom: 0px;
@@ -29,7 +33,6 @@ div.code {
   border-width: 5px;
   padding: 0.5em;
   font-size: 20pt;
-  min-height: 5.1em;
 }
 
 div.code-outer {
@@ -39,6 +42,7 @@ div.code-outer {
   background: -webkit-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Firefox 3.6 to 15 */
+  width: 60%;
 }
 
 /* Buttons */
@@ -59,7 +63,7 @@ button:hover {
 
 button.ans {
   font-size: 14px;
-  width: 50%;
+  width: 30%;
 }
 
 button.big {
@@ -83,4 +87,8 @@ div.center {
 
 .ModeHidden {
     display: none;
+}
+
+#Game {
+  display: flex;
 }
