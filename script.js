@@ -93,13 +93,11 @@ function processResults(jsonObj, count) {
     for (i = 1; i < 5; i++) {
         if (i == correctAnswer) {
             id("Answer" + i).onclick = function () {
-                alert("Correct answer");
                 score++;
                 processResults(jsonObj, count+1);
             };
         } else {
             id("Answer" + i).onclick = function () {
-                alert("Wrong answer!");
                 score--;
                 processResults(jsonObj, count+1);
             };

@@ -1,10 +1,24 @@
 * {
   font-family: Ubuntu Mono;
+  color: #00DFFC;
+}
+
+body {
+  background-color: #343838;
+  margin: 0px;
+  padding: 0px;
+  margin: 0px 10px 0px 10px;
 }
 
 div.header {
   text-align: center;
-  padding-bottom: 1em;
+  padding: 1em;
+  background-color: #005F6B;
+  border-radius: 0px 0px 10px 10px;
+}
+
+div.header:hover {
+  color: gray;
 }
 
 iframe {
@@ -13,8 +27,8 @@ iframe {
 
 p.header{
   font-size: 72pt; 
-  padding-bottom: 0px;
-  margin-bottom: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 div.header:hover {
@@ -22,19 +36,6 @@ div.header:hover {
 }
 
 /* Console Styling */
-
-div.code {
-  background-color: rgb(42, 42, 42);
-  color: white;
-  font-family: Ubuntu Mono;
-  border-radius: 7px;
-  border-color: black;
-  border-style: solid;
-  border-width: 5px;
-  padding: 0.5em;
-  font-size: 20pt;
-  height: 100%;
-}
 
 div.code-outer {
   border-radius: 10px;
@@ -44,14 +45,21 @@ div.code-outer {
   background: -o-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Firefox 3.6 to 15 */
   width: 60%;
-  height: 50%;
+}
+
+div.code {
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 6px;
+  border-color: black;
+  background-color: white;
+  height: 100%;
 }
 
 /* Buttons */
 
 button {
-  color: white;
-  background-color: rgb(42, 42, 42);
+  background-color: #005F6B;
   border-radius: 5px;
   border-style: none;
   padding: 1em;
@@ -60,28 +68,25 @@ button {
 }
 
 button:hover {
-  box-shadow: 0px 0px 5px black;
+  background-color: #008C9E;
 }
 
 button.ans {
   font-size: 14px;
   width: 100%;
-  border-style: solid;
-  border-color: linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* Standard syntax */
-  border-color: -webkit-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Safari 5.1 to 6.0 */
-  border-color: -o-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Opera 11.1 to 12.0 */
-  border-color: -moz-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Firefox 3.6 to 15 */
-  border-width: 3px;
+  border-style: none;
   border-radius: 10px;
-  border-color: rgb(217,231,238);
-  margin-left: 0px;
-  margin-right: 0px;
 }
 
 button.big {
-  font-size: 40px;
-  width: 250px;
+  font-size: 24pt;
+  width: 200px;
   border-radius: 10px;
+  border-style: none;
+  border-width: 5px;
+  margin: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 /* Divs */
@@ -89,6 +94,14 @@ button.big {
 div.center {
   margin: 1em;
   margin-top: 0px;
+  text-align: center;
+}
+
+div.credits {
+  width: 100%;
+  background-color: #2E6885;
+  margin: 0px;
+  padding: 0.5em;
   text-align: center;
 }
 
