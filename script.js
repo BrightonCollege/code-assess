@@ -67,10 +67,11 @@ function processResults(jsonObj, count) {
     var q = q_array[count];
     var gist = id("gist");
     
-    var gisthtml = '<html><body><script src="https://gist.github.com/adrianiainlam/2bfe1b8e70616eada426.js"></script></body></html>';    
+    var gistURL = q.QuestionText;
+    var gisthtml = '<html><body>' + gistURL + '</body></html>';
     gist.contentDocument.open();
     gist.contentDocument.writeln(gisthtml);
-    gist.contentDocument.close(); 
+    gist.contentDocument.close();
     
     
     updateScore();
