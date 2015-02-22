@@ -1,0 +1,114 @@
+{
+	"Questions":[
+		{
+			"QuestionText":"x=[i for i in range(10)] \n x will hold:",
+			"Answers":[
+				"a list of all integers between 1 and 10",
+				"a list of all integers between 0 and 9",
+				"a list of all numbers between 0 and 10",
+				"a list of 10 'i's",
+				2
+			]
+		},
+		{
+			"QuestionText":"x=sum([i for i in range(10) if i%2==0]) \n x will hold:",
+			"Answers":[
+				"the sum of all numbers between 1 and 10",
+				"the sum of all even numbers between 1 and 10",
+				"the sum of all numbers between 0 and 9",
+				"the sum of all even numbers between 0 and 9",
+				4
+			]
+		},
+		{
+			"QuestionText":"x=[] \n for i in range(1,51): \n \t x.append(i*5) \n is equivalent to:",
+			"Answers":[
+				"x=[i for i*5 in range(1,51)]",
+				"x=[i*5 for i in range(1,51)]",
+				"x=[5 for i in range(1,51)]",
+				"x=[5i for i in range(1,51)]",
+				2
+			]
+		},
+		{
+			"QuestionText":"x=[1] \n for i in range(2,51): \n \t x.append(i*x[-1]) \n x will hold:",
+			"Answers":[
+				"a list of all the squares of integers between 1 and 50",
+				"a list of all the factorials of integers between 1 and 50",
+				"a list of all integers between 1 and 50",
+				"The programme will crash",
+				2
+			]
+		},
+		{
+			"QuestionText":"print(sum([j**2 for j in range(100) if len(str(j))==2])) \n Prints:",
+			"Answers":[
+				"a list of all the squares of 2 digit integers",
+				"a list of all the squares of integers between 0 and 100",
+				"the sum of all the squares of 2 digit integers",
+				"the sum of all the squares of integers between 0 and 100",
+				3
+			]
+		},
+		{
+			"QuestionText":"x=[5*str(i) for i in range(1,10)] \n x will hold:",
+			"Answers":[
+				"a list of the first 9 multiples of 5 as integers",
+				"a list of the first 9 multiples of 5 as strings",
+				"a list of the first 9 iterations of the pattern: '11111','22222','33333'...",
+				"a list of the first 9 iterations of the pattern: '00000','11111','22222'...",
+				3
+			]
+		},
+		{
+			"QuestionText":"x=[[i*j for j in range(1,10)] for i in range(1,100)] \n x will hold",
+			"Answers":[
+				"a list of lists of the first 9 multiples of the first 99 integers",
+				"a list of lists of the first 99 multiples of the first 9 integers",
+				"a list of lists of the first 10 multiples of the first 100 integers",
+				"a list of lists of the first 100 multiples of the first 10 integers",
+				1
+			]
+		},
+		{
+			"QuestionText":"y={<dictionary of names:height for students in a class>} \n x=[i for i in y if y[i]>150] \n x will hold",
+			"Answers":[
+				"a list of all the heights in the class that are greater than 150",
+				"a list of all the names in the class whose height is greater than 150",
+				"an empty list as names are strings and therefore cannot be compared with 150",
+				"The process will return an error as names are strings and therefore cannot be compared with 150",
+				2
+			]
+		},
+		{
+			"QuestionText":"y={<dictionary of names:height for students in a class>} \n Which of the following will print the number of people in the class who is taller than 150",
+			"Answers":[
+				"print(sum([y[i] for i in y if i>150]))",
+				"print(len([i for i in y if i>150]))",
+				"print(sum([y[i] for i in y if y[i]>150]))",
+				"print(len([i for i in y if y[i]>150]))",
+				4
+			]
+		},
+		{
+			"QuestionText":"prime(x) returns True if x is prime and False otherwise \n x=[i for i in range(100) if prime(i)] \n x will hold:",
+			"Answers":[
+				"a list of all prime numbers between 0 and 100",
+				"a list of True's and False's depending on wether the index of the element is prime",
+				"a list of all numbers between 0 and 100",
+				"The process will return an error as prime(i) doesn't return a boolean",
+				1
+			]
+		},
+		{
+			"QuestionText":"",
+			"Answers":[
+				"",
+				"",
+				"",
+				"",
+				3
+			]
+		}			
+	]
+}		
