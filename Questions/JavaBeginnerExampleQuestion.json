@@ -1,7 +1,7 @@
 {
    "Questions":[
       {
-         "QuestionText":"System.out.println(\"Fuck you\");",
+         "QuestionText":"System.out.println(Fuck you);",
          "Answers":[
             "Print out \"Fuck you\" in console and move cursos to next line",
             "Print out \"Fuck you\" in console and stay on the same line",
