@@ -1,0 +1,11 @@
+.ModeVisible {
+  height:  100%;
+  width:   100%;
+  visibility: visible
+}
+
+.ModeHidden {
+    height:100%;
+    width: 100%;
+    visibility: hidden;
+}

@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html>
+<html lang = "en">
 <head>
-	<title>Code Assess</title>
+    <title>Code-Assess</title>
+    <script language="javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="question-code"></div>
-	<div id="question-question"></div>
-	<div id="inputs">
-		<form>
-			<input type="radio">A1</input>
-			<input type="radio">A2</input>
-			<input type="radio">A3</input>
-			<input type="button">Submit</input>
-		</form>
-	</div>
+    <div id = "Main", class = "ModeVisible">
+        <h1 id = "URL">URL</h1>
+        <input type="button" value="Java" id="JavaButton" onclick="ChangeURL('Java')"></input>
+        <input type="button" value="Python" id="Pythonbutton" onclick="ChangeURL('Python')"></input>
+    </div>
+    <div id = "Game", class = "ModeHidden">
+        
+    </div>
 </body>
 </html>
