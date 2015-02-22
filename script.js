@@ -102,6 +102,19 @@ function processResults(jsonObj, count) {
     }
 }
 
+  function parseUserChoiceToJson() {
+        var question = new Object();
+        question.QuestionText = document.getElementById("questionURL").value;
+        question.Answers = new Array(5);
+        for (i = 1; i < 5; i++) {
+            question.Answers[i-1] = document.getElementById("variant" + i).value;
+        }    
+        question.Answers[4] = document.getElementById("rightVariant").value;
+        Questions.push(question);
+        document.getElementById("JSON").innerHTML = '{"Questions":' +JSON.stringify(Questions) + '}';
+    }
+
+
 function updateTimer() {
     time++;
     document.getElementById("time").innerHTML = time;
