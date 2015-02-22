@@ -35,10 +35,10 @@ function processResults(jsonObj) {
     var q_array = jsonObj.Questions;
     var q = q_array[0];
     
-    var cont = id("buttonContainer1");
+    var div = id("Game");
     var script = document.createElement("script");
     script.setAttribute("src", "https://gist.github.com/adrianiainlam/2bfe1b8e70616eada426.js");
-    cont.insertBefore(script, cont);
+    cont.insertBefore(script, div.firstChild);
     
     var ans_array = q.Answers;
     
