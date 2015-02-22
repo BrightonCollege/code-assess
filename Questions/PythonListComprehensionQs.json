@@ -71,13 +71,33 @@
 			]
 		},
 		{
-			"QuestionText":"y={<dictionary of names:height for some class>} \n x=[i for i in y if y[i]>150] \n x will hold",
+			"QuestionText":"y={<dictionary of names:height for students in a class>} \n x=[i for i in y if y[i]>150] \n x will hold",
 			"Answers":[
-				"a list of all the heights in the class that is greater than 150",
+				"a list of all the heights in the class that are greater than 150",
 				"a list of all the names in the class whose height is greater than 150",
 				"an empty list as names are strings and therefore cannot be compared with 150",
 				"The process will return an error as names are strings and therefore cannot be compared with 150",
 				2
+			]
+		},
+		{
+			"QuestionText":"y={<dictionary of names:height for students in a class>} \n Which of the following will print the number of people in the class who is taller than 150",
+			"Answers":[
+				"print(sum([y[i] for i in y if i>150]))",
+				"print(len([i for i in y if i>150]))",
+				"print(sum([y[i] for i in y if y[i]>150]))",
+				"print(len([i for i in y if y[i]>150]))",
+				4
+			]
+		},
+		{
+			"QuestionText":"prime(x) returns True if x is prime and False otherwise \n x=[i for i in range(100) if prime(i)] \n x will hold:",
+			"Answers":[
+				"a list of all prime numbers between 0 and 100",
+				"a list of True's and False's depending on wether the index of the element in the list is prime",
+				"a list of all numbers between 0 and 100",
+				"The process will return an error as prime(i) doesn't return a boolean",
+				1
 			]
 		},
 		{
@@ -89,6 +109,6 @@
 				"",
 				3
 			]
-		}		
+		}			
 	]
 }		
