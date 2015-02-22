@@ -20,6 +20,10 @@ function ChangeMode(Mode) {
         document.getElementById("custom").className = "ModeVisible";
         return;
     }
+    if (Mode == 'AccessURL') {
+            getJsonRequest(document.getElementById("userURL").value);
+            return;
+        }
     if (Mode == 'Creator') {
         document.getElementById("creator").className = "ModeVisible";
         return;
@@ -42,7 +46,8 @@ function GameOverScreen() {
     document.getElementById("Game Over").className = "ModeVisible";
 }
 
-function getJsonRequest(url) {
+ function getJsonRequest(url) {
+    try {
     var req = new XMLHttpRequest();
     var jsonObj;
     req.open("GET", url);
@@ -56,8 +61,13 @@ function getJsonRequest(url) {
             processResults(jsonObj, 0);
         }
     }
+    document.getElementById("wrongURL").hidden = true;
     req.send();
-}
+    } catch(e) {
+        document.getElementById("wrongURL").hidden = false;
+    }
+    }
+    
 
 function processResults(jsonObj, count) {
     var id = document.getElementById.bind(document);
