@@ -14,7 +14,6 @@ function ChangeMode(Mode) {
     if (Mode == 'Python') {
         LastMode = 'Python';
         document.getElementById("URL").innerText = "Questions/PythonNormalExampleQuestion.json";
-        PythonListComprehensionQs.json
         getJsonRequest("Questions/PythonListComprehensionQs.json");
     }
     if (Mode == 'Custom') {
