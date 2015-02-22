@@ -1,4 +1,4 @@
-var score = 0;
+//var score = 0;
 
 function ChangeMode(Mode) {
     document.getElementById("Main").className = "ModeHidden";
