@@ -1,6 +1,7 @@
 function ChangeURL(URL) {
     if (URL == 'Java') {
-        document.getElementById("URL").innerText = "Questions/JavaBeginnerExampleQuestion.json";
+        //document.getElementById("URL").innerText = "Questions/JavaBeginnerExampleQuestion.json";
+        getJsonRequest("Questions/JavaBeginnerExampleQuestion.json");
     }
     if (URL == 'Python') {
         document.getElementById("URL").innerText = "Questions/PythonNormalExampleQuestion.json";
