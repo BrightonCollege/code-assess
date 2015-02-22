@@ -33,6 +33,7 @@ div.code {
   border-width: 5px;
   padding: 0.5em;
   font-size: 20pt;
+  height: 50%;
 }
 
 div.code-outer {
@@ -53,17 +54,27 @@ button {
   border-radius: 5px;
   border-style: none;
   padding: 1em;
-  box-shadow: 0px 0px 5px black;
-  margin: 0.5em;
+  margin: 1em;
+  margin-top: 0px;
 }
 
 button:hover {
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0px 0px 5px black;
 }
 
 button.ans {
   font-size: 14px;
   width: 100%;
+  border-style: solid;
+  border-color: linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* Standard syntax */
+  border-color: -webkit-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Safari 5.1 to 6.0 */
+  border-color: -o-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Opera 11.1 to 12.0 */
+  border-color: -moz-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Firefox 3.6 to 15 */
+  border-width: 3px;
+  border-radius: 10px;
+  border-color: rgb(217,231,238);
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 button.big {
@@ -76,6 +87,7 @@ button.big {
 
 div.center {
   margin: 1em;
+  margin-top: 0px;
   text-align: center;
 }
 
