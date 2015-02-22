@@ -1,7 +1,7 @@
 {
    "Questions":[
       {
-         "QuestionText":"System.out.println(Fuck you);",
+         "QuestionText":"https://gist.github.com/MaksymPetyak/5aff6e7ac23da9cf893e",
          "Answers":[
             "Print out \"Fuck you\" in console and move cursos to next line",
             "Print out \"Fuck you\" in console and stay on the same line",
@@ -11,7 +11,7 @@
          ]
       },
       {
-         "QuestionText":"int c = 0; \n for (int i = 1; i <= 5; i++) { \n c*=c; \n }",
+         "QuestionText":"https://gist.github.com/MaksymPetyak/baba953c3366b58a2a37",
          "Answers":[
             "c will hold of 5 factorial",
             "c will hold value of 4 factorial",
