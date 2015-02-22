@@ -63,12 +63,12 @@ function processResults(jsonObj, count) {
         if (i == correctAnswer) {
             id("Answer" + i).onclick = function () {
                 alert("Correct answer");
-                processResults(jsonObj, count++);
+                processResults(jsonObj, count+1);
             };
         } else {
             id("Answer" + i).onclick = function () {
                 alert("Wrong answer!");
-                processResults(jsonObj, count++)
+                processResults(jsonObj, count+1)
             }
         }
     }
