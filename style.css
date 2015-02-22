@@ -1,11 +1,23 @@
 * {
   font-family: Ubuntu Mono;
-  font-weight: lighter;
 }
 
-body {
-  font-size: 12px;
+/* Console Styling */
+
+.code {
+  background-color: rgb(42, 42, 42);
+  color: white;
+  font-family: Ubuntu Mono;
+  border-radius: 7px;
+  border-color: black;
+  border-style: solid;
+  border-width: 5px;
+  padding: 0.5em;
+  font-size: 20pt;
+  min-height: 5.1em;
 }
+
+/* Buttons */
 
 button {
   color: white;
@@ -29,6 +41,8 @@ button.big {
   width: 250px;
   border-radius: 10px;
 }
+
+/* Main Divs */
 
 .ModeVisible {
   display: block;

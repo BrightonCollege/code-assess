@@ -1,13 +1,23 @@
+<<<<<<< Updated upstream
 function ChangeURL(URL) {
     if (URL == 'Java') {
         //document.getElementById("URL").innerText = "Questions/JavaBeginnerExampleQuestion.json";
         
         getJsonRequest("Questions/JavaBeginnerExampleQuestion.json");
+=======
+function ChangeMode(Mode) {
+    document.getElementById("Main").className = "ModeHidden";
+    if (Mode == 'Java') {
+        document.getElementById("URL").innerText = "Questions/JavaBeginnerExampleQuestion.json";
+>>>>>>> Stashed changes
     }
-    if (URL == 'Python') {
+    if (Mode == 'Python') {
         document.getElementById("URL").innerText = "Questions/PythonNormalExampleQuestion.json";
     }
-    document.getElementById("Main").className = "ModeHidden"
+    if (Mode == 'Custom') {
+        document.getElementById("custom").className = "ModeVisible";
+        return
+    }
     document.getElementById("Game").className = "ModeVisible";
 }
 

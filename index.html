@@ -6,12 +6,20 @@
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
 </head>
 <body>
+    <h1>Code Assess</h1>
+    <p>
+        URL: <span id="URL">None</span>
+    </p>
     <div id="Main" class="ModeVisible">
-        <h1 id="URL">URL</h1>
-        <button class="big" id="JavaButton" onclick="ChangeURL('Java')">Java</button>
-        <button class="big" id="Pythonbutton" onclick="ChangeURL('Python')">Python</button>
+        <button class="big" id="JavaButton" onclick="ChangeMode('Java')">Java</button>
+        <button class="big" id="PythonButton" onclick="ChangeMode('Python')">Python</button>
+        <button class="big" id="CustomButton" onclick="ChangeMode('Custom')">Custom</button>
+    </div>
+    <div id="custom" class="ModeHidden">
+        <h2>Custom Package Selector</h2>
     </div>
     <div id="Game" class="ModeHidden">
+<<<<<<< Updated upstream
         <!--<code id="Question">
             print "hello world!"
         </code>
@@ -25,6 +33,19 @@
             <button class="ans" id="Answer3">Answer3</button>
             <button class="ans" id="Answer4">Answer4</button>
         </p>
+=======
+        <div  class="code" id="Question">
+            print "hello world!"
+        </div>
+        <div>
+            <button id="Answer1">Answer1</button>
+            <button id="Answer2">Answer2</button>
+        </div>
+        <div>
+            <button id="Answer3">Answer3</button>
+            <button id="Answer4">Answer4</button>
+        </div>
+>>>>>>> Stashed changes
     </div>
 </body>
 </html>
