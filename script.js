@@ -1,14 +1,17 @@
 var score = 0;
 var time = 0;
 var timer;
+var LastMode; //will hold last mode choosen for the retry button, URL if custom
 
 function ChangeMode(Mode) {
     document.getElementById("Main").className = "ModeHidden";
     if (Mode == 'Java') {
+        LastMode = 'Java';
         document.getElementById("URL").innerText = "Questions/JavaBeginnerExampleQuestion.json";
         getJsonRequest("Questions/JavaBeginnerExampleQuestion.json");
     }
     if (Mode == 'Python') {
+        LastMode = 'Python';
         document.getElementById("URL").innerText = "Questions/PythonNormalExampleQuestion.json";
     }
     if (Mode == 'Custom') {
@@ -58,6 +61,7 @@ function processResults(jsonObj, count) {
         //Show game over screen
         clearInterval(timer);
         GameOverScreen();
+        return;
     }
     var q = q_array[count];
     var gist = id("gist");
