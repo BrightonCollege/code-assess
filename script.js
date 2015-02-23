@@ -50,12 +50,7 @@ function GameOverScreen() {
 function getJsonRequest(url) {
     var req = new XMLHttpRequest();
     var jsonObj;
-    try {
-         req.open("GET", url);
-    } catch(e) {
-         document.getElementById("wrongURL").hidden = false;  
-         return;
-    }
+    req.open("GET", url);  //try catch didn't work as mistake is in xmlh, not in js
     req.onreadystatechange = function() {
         if(this.readyState == 4) {
             jsonObj = JSON.parse(this.response);
@@ -66,6 +61,7 @@ function getJsonRequest(url) {
             processResults(jsonObj, 0);
         }
     }
+    document.getElementById("wrongURL").hidden = false;  
     req.send();
 }
 
