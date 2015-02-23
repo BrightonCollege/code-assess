@@ -116,11 +116,15 @@ function processResults(jsonObj, count) {
             id("Answer" + i).onclick = function () {
                 score++;
                 processResults(jsonObj, count + 1);
+                id("responce").innerHTML = "Correct!"
+                id("responce").style.color = "green"
             };
         } else {
             id("Answer" + i).onclick = function () {
                 score--;
                 processResults(jsonObj, count + 1);
+                id("responce").innerHTML = "Wrong!"
+                id("responce").style.color = "red"
             };
         }
     }

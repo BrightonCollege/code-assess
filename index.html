@@ -12,71 +12,85 @@
     <i id="URL" style="display: none;"></i>
     <div onclick="goHome();" class="header">
         <p class="header">Code Assess</p>
+        <p>A game to test your code reading skills.</p>
         <i class="fa fa-home"></i>
     </div>
-    <div id="Main" class="ModeVisible">
-        <div class="center">
-            <p class="bold">Default Packages</p>
-            <button class="big" id="JavaButton" onclick="ChangeMode('Java');">Java</button>
-            <button class="big" id="PythonButton" onclick="ChangeMode('Python');">Python</button>
-            <p class="bold">Custom Packages</p>
-            <button class="big" id="CustomCreaterButton" onclick="ChangeMode('Creator');">Creator</button>
-            <button class="big" id="CustomPlayerButton" onclick="ChangeMode('Player');">Player</button>
-            <p>Use creator to make new packages and player to play them!</p>
-            <p class="italics">
-                <a href="https://github.com/brightoncollege/Code-Assess/blob/gh-pages/README.md" target="_blank">Read Me</a> |
-                <a href="https://github.com/brightoncollege/Code-Assess/fork" target="_blank">Fork Me</a>
-            </p>
-        </div>
-    </div>
-    <div id="custom" class="ModeHidden">
-        <h2>Custom Package Selector</h2>
-        URL: <br />
-        <input type="text" id="userURL" />
-        <span id="wrongURL" style="display: none;">Wrong URL.</span>
-        <button onclick="ChangeMode('AccessURL')">Try Url!</button>
-        
-    </div>
-    <div id="Game" class="ModeHidden">
-        <div class="flex">
-            <iframe id="gist" style="width: 100%; height: 100%;"></iframe>
-            <div class="center" style="width: 40%;">
-                <button class="ans" id="Answer1">Answer1</button><br />
-                <button class="ans" id="Answer2">Answer2</button><br />
-                <button class="ans" id="Answer3">Answer3</button><br />
-                <button class="ans" id="Answer4">Answer4</button><br />
-                Score: <span id="score">0</span><br />
-                Time: <span id="time">0</span>
+    <div class="container">
+        <div id="Main" class="ModeVisible">
+            <div class="center">
+                <p class="bold">Default Packages</p>
+                <button class="big" id="JavaButton" onclick="ChangeMode('Java');">Java</button>
+                <button class="big" id="PythonButton" onclick="ChangeMode('Python');">Python</button>
+                <p class="bold">Custom Packages</p>
+                <button class="big" id="CustomCreaterButton" onclick="ChangeMode('Creator');">Creator</button>
+                <button class="big" id="CustomPlayerButton" onclick="ChangeMode('Player');">Player</button>
+                <p>Use creator to make new packages and player to play them!</p>
+                <p class="italics">
+                    <a href="https://github.com/brightoncollege/Code-Assess/blob/gh-pages/README.md" target="_blank">Read Me</a> |
+                    <a href="https://github.com/brightoncollege/Code-Assess/fork" target="_blank">Fork Me</a>
+                </p>
+                <p class="italics small">
+                    <a href="http://www.harrybeadle.co.uk">Harry Beadle</a> |
+                    <a href="http://adrianiainlam.github.io">Adrian Lam</a> |
+                    Maksym Petyak |
+                    Timmy Lee
+                </p>
             </div>
         </div>
-    </div>
-    <div id="creator" class="ModeHidden">
-        <div>
-            Gist URL <input type="text" id="questionURL" /><br />
-            Option 1 <input type="text" id="variant1" /><br />
-            Option 2 <input type="text" id="variant2" /><br />
-            Option 3 <input type="text" id="variant3" /><br />
-            Option 4 <input type="text" id="variant4" /><br />
-            Correct Answer: 
-            <select id="rightVariant">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select><br />
+        <div id="custom" class="ModeHidden">
+            <h2>Custom Package Selector</h2>
+            URL: <br />
+            <input type="text" id="userURL" />
+            <span id="wrongURL" style="display: none;">Wrong URL.</span>
+            <button onclick="ChangeMode('AccessURL')">Try Url!</button>
+            
         </div>
-        <div>
-            <button onclick="parseUserChoiceToJson()">Add Question</button><br />
+        <div id="Game" class="ModeHidden">
+            <div class="flex">
+                <iframe id="gist" style="width: 100%; height: 100%;"></iframe>
+                <div class="center" style="width: 40%;">
+                    <p>
+                        <span id="responce"></span> Select an option:
+                    </p>
+                    <button class="ans" id="Answer1">Answer1</button><br />
+                    <button class="ans" id="Answer2">Answer2</button><br />
+                    <button class="ans" id="Answer3">Answer3</button><br />
+                    <button class="ans" id="Answer4">Answer4</button><br />
+                    <p>
+                        Score: <span id="score">0</span><br />
+                        Time: <span id="time">0</span>
+                    </p>
+                </div>
+            </div>
         </div>
-        <div>
-            <textarea id="JSON"></textarea> 
+        <div id="creator" class="ModeHidden">
+            <div>
+                Gist URL <input class="black" type="text" id="questionURL" /><br /><br />
+                Option 1 <input class="black" type="text" id="variant1" /><br />
+                Option 2 <input class="black" type="text" id="variant2" /><br />
+                Option 3 <input class="black" type="text" id="variant3" /><br />
+                Option 4 <input class="black" type="text" id="variant4" /><br /><br />
+                Correct Answer: 
+                <select id="rightVariant">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select><br /><br />
+            </div>
+            <div>
+                <button onclick="parseUserChoiceToJson()">Add Question</button><br />
+            </div><br />
+            <div>
+                <textarea id="JSON"></textarea> 
+            </div>
         </div>
-    </div>
-    <div id="GameOver" class="ModeHidden">
-        <div class="center">
-        Score: <span id="finalScore">0</span><br />
-        Time: <span id="finalTime">0</span><br />
-        <button id="Restart" onclick="ChangeMode(LastMode)">Try again?</button>
+        <div id="GameOver" class="ModeHidden">
+            <div class="center">
+            Score: <span id="finalScore">0</span><br />
+            Time: <span id="finalTime">0</span><br />
+            <button id="Restart" onclick="ChangeMode(LastMode)">Try again?</button>
+            </div>
         </div>
     </div>
 </body>

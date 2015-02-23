@@ -1,3 +1,5 @@
+/* Global Syling */
+
 * {
   font-family: Ubuntu Mono;
   color: #00DFFC;
@@ -10,6 +12,8 @@ body {
   margin: 0px 10px 0px 10px;
 }
 
+/* Header Styling */
+
 div.header {
   text-align: center;
   padding: 1em;
@@ -19,10 +23,6 @@ div.header {
 
 div.header:hover {
   color: gray;
-}
-
-iframe {
-  border: none;
 }
 
 p.header{
@@ -37,23 +37,8 @@ div.header:hover {
 
 /* Console Styling */
 
-div.code-outer {
-  border-radius: 10px;
-  padding: 3px;
-  background: linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* Standard syntax */
-  background: -webkit-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgb(217,231,238), rgb(114,112,112)); /* For Firefox 3.6 to 15 */
-  width: 60%;
-}
-
-div.code {
-  border-radius: 10px;
-  border-style: solid;
-  border-width: 6px;
-  border-color: black;
-  background-color: white;
-  height: 100%;
+iframe {
+  border: none;
 }
 
 /* Buttons */
@@ -120,6 +105,10 @@ div.credits {
   display: -webkit-flex;
 }
 
+.container {
+  padding: 1em;
+}
+
 /* Text styles */
 
 .italics {
@@ -128,4 +117,12 @@ div.credits {
 
 .bold {
   font-weight: bold;
+}
+
+.black {
+  color: black;
+}
+
+.small {
+  font-size: 10pt;
 }
