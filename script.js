@@ -50,9 +50,13 @@ function GameOverScreen() {
 function getJsonRequest(url) {
     var req = new XMLHttpRequest();
     var jsonObj;
-    req.open("GET", url);  //try catch didn't work as mistake is in xmlh, not in js
+    req.open("GET", url);
     req.onreadystatechange = function() {
         if(this.readyState == 4) {
+            if(this.status == 404) { // or != 200, depending on what you want
+                console.log("not found"); // change here
+                return;
+            }
             document.getElementById("Game").className = "ModeVisible";
             document.getElementById("custom").className = "ModeHidden";
             jsonObj = JSON.parse(this.response);
