@@ -53,6 +53,8 @@ function getJsonRequest(url) {
     req.open("GET", url);  //try catch didn't work as mistake is in xmlh, not in js
     req.onreadystatechange = function() {
         if(this.readyState == 4) {
+            document.getElementById("Game").className = "ModeVisible";
+            document.getElementById("custom").className = "ModeHidden";
             jsonObj = JSON.parse(this.response);
             score = 0;
             time = 0;
