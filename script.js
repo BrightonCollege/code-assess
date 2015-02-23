@@ -55,6 +55,7 @@ function getJsonRequest(url) {
         if(this.readyState == 4) {
             if(this.status == 404) { // or != 200, depending on what you want
                 console.log("not found"); // change here
+                document.getElementById("wrongURL").hidden = false; 
                 return;
             }
             document.getElementById("Game").className = "ModeVisible";
@@ -67,7 +68,7 @@ function getJsonRequest(url) {
             processResults(jsonObj, 0);
         }
     }
-    document.getElementById("wrongURL").hidden = false;  
+    document.getElementById("wrongURL").hidden = true;  
     req.send();
 }
 
