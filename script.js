@@ -48,10 +48,14 @@ function GameOverScreen() {
 }
 
 function getJsonRequest(url) {
-    try {
     var req = new XMLHttpRequest();
     var jsonObj;
-    req.open("GET", url);
+    try {
+         req.open("GET", url);
+    } catch(e) {
+         document.getElementById("wrongURL").hidden = false;  
+         return;
+    }
     req.onreadystatechange = function() {
         if(this.readyState == 4) {
             jsonObj = JSON.parse(this.response);
@@ -63,9 +67,6 @@ function getJsonRequest(url) {
         }
     }
     req.send();
-    } catch(e) {
-        document.getElementById("wrongURL").hidden = false;
-    }
 }
 
 function processResults(jsonObj, count) {
