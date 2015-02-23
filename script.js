@@ -5,7 +5,7 @@ var LastMode; //will hold last mode choosen for the retry button, URL if custom
 var Questions = new Array() //used in JSON parcing
 function ChangeMode(Mode) {
     document.getElementById("Main").className = "ModeHidden";
-    document.getElementById("Game Over").className = "ModeHidden";
+    document.getElementById("GameOver").className = "ModeHidden";
     if (Mode == 'Java') {
         LastMode = 'Java';
         document.getElementById("URL").innerText = "Questions/JavaBeginnerExampleQuestion.json";
@@ -36,7 +36,7 @@ function goHome() {
     document.getElementById("Main").className = "ModeVisible";
     document.getElementById("Game").className = "ModeHidden";
     document.getElementById("custom").className = "ModeHidden";
-    document.getElementById("Game Over").className = "ModeHidden";
+    document.getElementById("GameOver").className = "ModeHidden";
     document.getElementById("creator").className = "ModeHidden";
 }
 
@@ -44,7 +44,7 @@ function GameOverScreen() {
     document.getElementById("Game").className = "ModeHidden";
     document.getElementById("finalScore").innerHTML = score;
     document.getElementById("finalTime").innerHTML = time;
-    document.getElementById("Game Over").className = "ModeVisible";
+    document.getElementById("GameOver").className = "ModeVisible";
 }
 
 function getJsonRequest(url) {
