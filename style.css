@@ -112,10 +112,20 @@ div.credits {
 }
 
 .ModeHidden {
-    display: none;
+  display: none;
 }
 
 .flex {
   display: flex;
   display: -webkit-flex;
+}
+
+/* Text styles */
+
+.italics {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
 }
