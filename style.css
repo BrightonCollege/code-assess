@@ -1,8 +1,16 @@
-/* Global Syling */
+/* Global Styling */
 
 * {
-  font-family: Ubuntu Mono;
+  font-family: "Ubuntu Mono";
   color: #00DFFC;
+}
+
+.homeIcon {
+  height: 1em;
+}
+
+.homeIcon path {
+  fill: currentColor;
 }
 
 body {
