@@ -3,6 +3,7 @@
 * {
   font-family: "Ubuntu Mono";
   color: #00DFFC;
+  font-size: 14pt;
 }
 
 .homeIcon {
@@ -37,6 +38,8 @@ p.header{
   font-size: 72pt; 
   padding: 0px;
   margin: 0px;
+  font-family: Ubuntu;
+  font-weight: lighter;
 }
 
 div.header:hover {
@@ -58,6 +61,7 @@ button {
   padding: 1em;
   margin: 1em;
   margin-top: 0px;
+  font-size: 14pt;
 }
 
 button:hover {
@@ -80,6 +84,10 @@ button.big {
   margin: 0.5em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+}
+
+button.long {
+  width: 300px;
 }
 
 /* Divs */
@@ -133,4 +141,10 @@ div.credits {
 
 .small {
   font-size: 10pt;
+}
+
+/* Special Font Cases */
+
+input {
+  color: black;
 }

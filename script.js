@@ -6,6 +6,7 @@ var Questions = []; //used in JSON parsing
 var id = document.getElementById.bind(document); // makes lines shorter and more readable
 
 function ChangeMode(mode) {
+    resetResponce()
     hideElement(id("Main"));
     hideElement(id("GameOver"));
     switch(mode) {
@@ -45,6 +46,7 @@ function ChangeMode(mode) {
 }
 
 function goHome() {
+    resetResponce()
     clearInterval(timer);
     showElement(id("Main"));
     hideElement(id("Game"));
@@ -61,6 +63,7 @@ function GameOverScreen() {
 }
 
 function getJsonRequest(url) {
+    hideElement(id("wrongURL"));
     var req = new XMLHttpRequest();
     req.open("GET", url);
     req.onreadystatechange = function() {
@@ -80,7 +83,6 @@ function getJsonRequest(url) {
             }
         }
     }
-    hideElement(id("wrongURL"));
     req.send();
 }
 
@@ -152,4 +154,8 @@ function showElement(elem) {
 
 function hideElement(elem) {
     elem.style.display = "none";
+}
+
+function resetResponce() {
+    id("responce").innerHTML = ""
 }

@@ -36,8 +36,8 @@
                     <a href="https://github.com/brightoncollege/code-assess/fork" target="_blank">Fork Me</a>
                 </p>
                 <p class="italics small">
-                    <a href="http://www.harrybeadle.co.uk">Harry Beadle</a> |
-                    <a href="https://adrianiainlam.github.io">Adrian Lam</a> |
+                    <a class="italics small" href="http://www.harrybeadle.co.uk">Harry Beadle</a> |
+                    <a class="italics small" href="http://adrianiainlam.github.io">Adrian Lam</a> |
                     Maksym Petyak |
                     Timmy Lee
                 </p>
@@ -58,10 +58,10 @@
                     <p>
                         <span id="responce"></span> Select an option:
                     </p>
-                    <button class="ans" id="Answer1">Answer1</button><br />
-                    <button class="ans" id="Answer2">Answer2</button><br />
-                    <button class="ans" id="Answer3">Answer3</button><br />
-                    <button class="ans" id="Answer4">Answer4</button><br />
+                    <button class="ans" id="Answer1"></button><br />
+                    <button class="ans" id="Answer2"></button><br />
+                    <button class="ans" id="Answer3"></button><br />
+                    <button class="ans" id="Answer4"></button><br />
                     <p>
                         Score: <span id="score">0</span><br />
                         Time: <span id="time">0</span>
@@ -71,11 +71,17 @@
         </div>
         <div id="creator" class="ModeHidden">
             <div>
-                Gist URL <input class="black" type="text" id="questionURL" /><br /><br />
-                Option 1 <input class="black" type="text" id="variant1" /><br />
-                Option 2 <input class="black" type="text" id="variant2" /><br />
-                Option 3 <input class="black" type="text" id="variant3" /><br />
-                Option 4 <input class="black" type="text" id="variant4" /><br /><br />
+                Gist URL <input class="black" type="text" id="questionURL" />
+                <span class="italics">If you don't understand how this works,
+                check out <a href="#">this</a> readme.</span><br /><br />
+                Option 1 <input class="black" type="text" id="variant1" />
+                <br />
+                Option 2 <input class="black" type="text" id="variant2" />
+                <br />
+                Option 3 <input class="black" type="text" id="variant3" />
+                <br />
+                Option 4 <input class="black" type="text" id="variant4" />
+                <br /><br />
                 Correct Answer: 
                 <select id="rightVariant">
                     <option value="1">1</option>
@@ -95,7 +101,7 @@
             <div class="center">
             Score: <span id="finalScore">0</span><br />
             Time: <span id="finalTime">0</span><br />
-            <button id="Restart" onclick="ChangeMode(LastMode)">Try again?</button>
+            <button class="big long" id="Restart" onclick="ChangeMode(LastMode)">Try again?</button>
             </div>
         </div>
     </div>
